@@ -3,14 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Home - My CSS Project</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css"> 
+</head>
 <body>
     <header><h1>Quân Trương Personal Website</h1></header>
-    <nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
     <main>
-        <h2>Welcome to My Homepage</h2>
-        <p>This is the main content area where I practice my CSS layout skills.</p>
+        <h2>Interactive Photo Gallery</h2>
+        <p>Hover over the images below to display them in full size with descriptions.</p>
+
+        <div id="image">
+            Hover over an image below to display here.
+        </div>
+
+        <div class="preview-container">
+            <img class="preview" 
+                 src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500" 
+                 alt="Coding background with HTML/CSS code on screen" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="undo()">
+            
+            <img class="preview" 
+                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500" 
+                 alt="Retro gaming setup with monitors and consoles" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="undo()">
+            
+            <img class="preview" 
+                 src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500" 
+                 alt="Professional studio microphone and headphones" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="undo()">
+        </div>
     </main>
+
     <footer><p>&copy; 2026 Built by Quân Trương</p></footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
