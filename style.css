@@ -1,16 +1,33 @@
-/* ========================================== */
-/* KHU VỰC HIỂN THỊ ẢNH LỚN (#image) */
-/* ========================================== */
+/* Định dạng cơ bản toàn trang */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f7fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+header h1 {
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+/* KHU VỰC HIỂN THỊ ẢNH LỚN (BẮT BUỘC COI THEO ĐỀ) */
 #image {
     width: 100%;
-    max-width: 800px;
+    max-width: 750px;
     height: 400px;
-    border: 5px dashed #bdc3c7;
+    border: 5px dashed #cbd5e0;
     border-radius: 8px;
-    margin: 20px auto;
+    margin: 0 auto 25px auto;
     background-color: #edf2f7;
     
-    /* Cấu hình hiển thị background image mượt mà */
+    /* Thiết lập background image */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,48 +37,50 @@
     align-items: center;
     justify-content: center;
     
-    color: #7f8c8d;
+    color: #718096;
     font-size: 1.3rem;
     font-weight: bold;
     padding: 20px;
-    text-align: center;
     box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
 }
 
-/* Class bổ trợ khi hover vào ảnh (JS tự động thêm class này) */
+/* Class bổ trợ tự động thêm bằng JS khi di chuột vào ảnh */
 #image.active {
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
-    border: 5px solid #2c3e50;
+    border-style: solid;
+    border-color: #4a5568;
 }
 
-/* ========================================== */
-/* KHU VỰC CÁC ẢNH NHỎ PREVIEW (ÉP KÍCH THƯỚC) */
-/* ========================================== */
+/* KHU VỰC CÁC ẢNH NHỎ PREVIEW */
 .preview-container {
     display: flex;
     justify-content: center;
     gap: 15px;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 10px;
-    box-sizing: border-box;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-/* QUAN TRỌNG: Ép các ảnh nhỏ về đúng kích thước thumbnail, không cho tràn ra ngoài */
+/* Định dạng kích thước cố định cho ảnh thumbnail */
 .preview {
-    width: 30% !important; /* Ép độ rộng cố định */
-    height: 120px !important; /* Ép chiều cao cố định */
-    object-fit: cover; /* Giúp ảnh không bị méo khi co giãn */
-    border: 3px solid #dbdbdb;
+    width: 25%;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #e2e8f0;
     border-radius: 6px;
     cursor: pointer;
     transition: transform 0.2s, border-color 0.2s;
 }
 
-/* Hiệu ứng khi lướt qua ảnh nhỏ */
+/* Hiệu ứng zoom nhẹ khi di chuột vào ảnh nhỏ */
 .preview:hover {
     transform: scale(1.05);
-    border-color: #3498db;
+    border-color: #3182ce;
+}
+
+footer {
+    margin-top: 40px;
+    color: #a0aec0;
+    font-size: 0.9rem;
 }
